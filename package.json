@@ -3,9 +3,18 @@
   "version": "1.0.0-1",
   "description": "modern syslog - streaming, async, uses nan",
   "main": "index.js",
+  "os": [
+    "!win32"
+  ],
   "scripts": {
     "test": "tap test-*.js"
   },
   "author": "Sam Roberts <sam@strongloop.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tap": "^0.6.0"
+  },
+  "dependencies": {
+    "nan": "^1.6.2"
+  }
 }
