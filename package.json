@@ -7,11 +7,12 @@
     "!win32"
   ],
   "scripts": {
-    "test": "tap test-*.js"
+    "test": "tap test/test-*.js"
   },
   "author": "Sam Roberts <sam@strongloop.com>",
   "license": "MIT",
   "devDependencies": {
+    "debug": "^2.1.2",
     "tap": "^0.6.0"
   },
   "dependencies": {
