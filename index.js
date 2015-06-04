@@ -14,10 +14,13 @@ exports.facility = core.facility;
 exports.level = core.level;
 
 // High-level API, remove the redundant 'log' from method names.
+exports.version = require('./package.json').version;
 exports.open = open;
+exports.init = exports.open;
 exports.log = log;
 exports.upto = upto;
 exports.curmask = curmask;
+exports.setMask = setMask;
 exports.close = core.closelog;
 exports.Stream = Stream;
 
@@ -82,6 +85,18 @@ function curmask() {
   core.setlogmask(cur);
   return cur;
 }
+
+function setMask(level, upto) {
+  var mask;
+
+  if (upto)
+    mask = logUpto(level);
+  else
+    mask = logMask(level);
+
+  core.setlogmask(mask);
+}
+
 
 // Writable stream for syslog.
 

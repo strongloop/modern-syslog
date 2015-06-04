@@ -6,7 +6,10 @@ This is the only syslog library that:
 - Is async, because the libc APIs can block on localhost IPC under load, but
   that shouldn't block your app.
 - Can be used as a stream.
+- Has formatted log functions.
 - Uses nan, so supports node and io.js, and will continue to do so.
+- Is API compatible with [node-syslog][], from which I gathered inspiration
+  and owe thanks.
 
 Default mask depends on system.
 
@@ -20,7 +23,7 @@ For detailed descriptions of the core functions, see [man 3
 syslog](http://man7.org/linux/man-pages/man3/syslog.3.html).
 
 Note that syslog functions cannot fail, and neither throw errors, nor callback
-with errors. This is consistent with the core funtions, which do not have error
+with errors. This is consistent with the core functions, which do not have error
 return values.
 
 ### log(priority, msg, callback)
@@ -97,6 +100,14 @@ for details, and consider using `upto()` for most common use-cases.
 
 Returns current log mask, see `setmask()`.
 
+### setMask(...)
+
+Avoid this, its for backwards compatibility with [node-syslog][].
+
+### init(...)
+
+Avoid this, its for backwards compatibility with [node-syslog][].
+
 ## Properties
 
 Syslog properties are defined as a bi-directional map from String to Number, and
@@ -126,6 +137,16 @@ Object of properties:
 - `LOG_PERROR`: Log to stderr as well as syslog.
 - `LOG_PID`: Log process' PID with each message.
 
+These are unlikely to be useful, but are provided for completeness:
+
+- `LOG_NDELAY`: Open  the  connection  immediately (normally, the connection is
+  opened when the first message is logged).
+- `LOG_ODELAY`: The converse of `LOG_NDELAY`; opening of the connection is
+  delayed until the first message is logged (this is the default and need not be
+  specified).
+- `LOG_NOWAIT`: Archaic option that doesn't do anything on contemporary systems,
+  but is provided for backwards compatibility.
+
 ### syslog.facility
 
 - `LOG_AUTH`
@@ -148,3 +169,5 @@ Object of properties:
 - `LOG_SYSLOG`
 - `LOG_USER`
 - `LOG_UUCP`
+
+[node-syslog]: https://www.npmjs.com/package/node-syslog

@@ -135,8 +135,10 @@ void Init(Local<Object> exports) {
     exports->Set(NanNew<String>("option"), where = NanNew<Object>());
     DEFINE(LOG_CONS);
     DEFINE(LOG_NDELAY);
+    DEFINE(LOG_ODELAY);
     DEFINE(LOG_PERROR);
     DEFINE(LOG_PID);
+    DEFINE(LOG_NOWAIT);
 
     // facility argument to openlog() is any ONE of these:
     exports->Set(NanNew<String>("facility"), where = NanNew<Object>());
