@@ -10,6 +10,14 @@
     "test": "tap test/test-*.js"
   },
   "author": "Sam Roberts <sam@strongloop.com>",
+  "homepage": "http://github.com/sam-github/modern-syslog",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sam-github/modern-syslog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sam-github/modern-syslog/issues"
+  },
   "license": "MIT",
   "devDependencies": {
     "debug": "^2.1.2",
@@ -17,5 +25,12 @@
   },
   "dependencies": {
     "nan": "^1.6.2"
-  }
+  },
+  "tags": [
+    "log",
+    "logging",
+    "nan",
+    "syslog",
+    "system"
+  ]
 }
