@@ -1,6 +1,6 @@
 {
   "name": "modern-syslog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "modern syslog - streaming, async, uses nan",
   "main": "index.js",
   "os": [
