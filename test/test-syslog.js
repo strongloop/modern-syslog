@@ -15,7 +15,7 @@ function setmask(mask) {
   tap.test(fmt('set mask to %j', mask), function(t) {
     var last = syslog.setmask(mask);
     var now = syslog.setmask(mask);
-    console.log('set mask: was %s, set %s, now %s', h(last), h(mask), h(now));
+    t.comment('set mask: was %s, set %s, now %s', h(last), h(mask), h(now));
     currentMask = fmt('mask=%s', h(now));
     if (mask === 0) {
       t.equal(last, now);
@@ -75,10 +75,11 @@ expect(l.LOG_INFO, 'should see');
 masked(l.LOG_DEBUG, 'should not see');
 
 tap.test('MANUAL VERIFICATION ABOVE REQUIRED', function(t) {
-  console.error('%d log messages should be in syslog, looking like:', count);
-  console.error('   ... index 1 level (?) EXPECTED...');
-  console.error('   ... index %d level (?) EXPECTED...', count);
-  console.error('And the indices should be ordered and consecutive');
+  t.pass('test logs sent to syslog');
+  t.comment('%d log messages should be in syslog, looking like:', count);
+  t.comment('   ... index 1 level (?) EXPECTED...');
+  t.comment('   ... index %d level (?) EXPECTED...', count);
+  t.comment('And the indices should be ordered and consecutive');
   t.end();
 });
 
