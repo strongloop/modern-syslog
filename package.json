@@ -1,6 +1,6 @@
 {
   "name": "strong-syslog",
-  "version": "1.0.0-1",
+  "version": "1.0.0",
   "description": "modern syslog - streaming, async, uses nan",
   "main": "index.js",
   "os": [
