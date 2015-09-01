@@ -18,5 +18,8 @@ tap.test(function(t) {
   t.doesNotThrow(function() {
     Syslog.close();
   }, 'Syslog.close');
+  t.equal(Syslog.LOG_KERN, Syslog.facility.LOG_KERN);
+  t.equal(Syslog.LOG_PID, Syslog.option.LOG_PID);
+  t.equal(Syslog.LOG_EMERG, Syslog.level.LOG_EMERG);
   t.end();
 });

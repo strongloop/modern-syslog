@@ -60,16 +60,18 @@ exports.logMask = logMask;
 exports.logUpto = logUpto;
 
 // Invert constants, so its easy to look the string up by the value.
-function invert(obj) {
+// Expose keys globally, for backwards compatibility with node-syslog.
+function expose(obj) {
   for (var key in obj) {
-    var val = obj[key]
+    var val = obj[key];
+    exports[key] = val;
     obj[val] = key;
   }
 }
 
-invert(exports.option);
-invert(exports.facility);
-invert(exports.level);
+expose(exports.option);
+expose(exports.facility);
+expose(exports.level);
 
 // setlogmask() is too painful to use, most systems have a LOG_UPTO(level)
 // macro, we'll just export upto() directly, its what most users will want.
