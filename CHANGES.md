@@ -1,3 +1,9 @@
+2015-09-02, Version 1.1.0
+=========================
+
+ * compatiblity: expose LOG_ properties globally (Sam Roberts)
+
+
 2015-08-21, Version 1.0.3
 =========================
 
