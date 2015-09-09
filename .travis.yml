@@ -4,7 +4,7 @@ node_js:
   - '0.12'
   - 'iojs-v2'
   - 'iojs-v3'
-  - 'iojs'
+  - '4'
 sudo: false
 addons:
   apt:
