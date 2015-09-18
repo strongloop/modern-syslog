@@ -127,7 +127,7 @@ function toLevel(level) {
 }
 
 function toFacility(facility) {
-  if (facility in core.facility)
+  if (typeof facility === 'string' && facility in core.facility)
     return core.facility[facility];
 
   return facility;
