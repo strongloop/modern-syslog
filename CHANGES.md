@@ -1,3 +1,15 @@
+2015-09-18, Version 1.1.1
+=========================
+
+ * fix toFacility() so it preserves numbers (Ryan Graham)
+
+ * test: toLevel() and toFacility() (Ryan Graham)
+
+ * travis: replace iojs-head with node-v4 (Ryan Graham)
+
+ * add travis config (Ryan Graham)
+
+
 2015-09-02, Version 1.1.0
 =========================
 
