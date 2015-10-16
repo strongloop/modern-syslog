@@ -1,3 +1,11 @@
+2015-10-16, Version 1.1.2
+=========================
+
+ * define LOG_PERROR if not defined by platform (Ryan Graham)
+
+ * Use strongloop conventions for licensing (Sam Roberts)
+
+
 2015-09-18, Version 1.1.1
 =========================
 
