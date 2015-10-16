@@ -134,7 +134,7 @@ Levels are listed from highest priority, to lowest:
 Object of properties:
 
 - `LOG_CONS`: Log to console if there is error logging to syslog.
-- `LOG_PERROR`: Log to stderr as well as syslog.
+- `LOG_PERROR`: Log to stderr as well as syslog. (no-op on Solaris)
 - `LOG_PID`: Log process' PID with each message.
 
 These are unlikely to be useful, but are provided for completeness:

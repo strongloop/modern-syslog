@@ -128,6 +128,10 @@ NAN_MODULE_INIT(Init) {
     DEFINE(LOG_CONS);
     DEFINE(LOG_NDELAY);
     DEFINE(LOG_ODELAY);
+#ifndef LOG_PERROR
+// not defined on Solaris but we want the exported object to be consistent
+#define LOG_PERROR 0x0 // no-op
+#endif
     DEFINE(LOG_PERROR);
     DEFINE(LOG_PID);
     DEFINE(LOG_NOWAIT);
