@@ -1,3 +1,15 @@
+2016-03-23, Version 1.1.3
+=========================
+
+ * update repo information in package.json (Ryan Graham)
+
+ * update copyrights (Ryan Graham)
+
+ * ci: remove iojs, add node-v5 (Ryan Graham)
+
+ * Refer to licenses with a link (Sam Roberts)
+
+
 2015-10-16, Version 1.1.2
 =========================
 
