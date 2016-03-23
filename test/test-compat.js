@@ -1,3 +1,8 @@
+// Copyright IBM Corp. 2015,2016. All Rights Reserved.
+// Node module: modern-syslog
+// This file is licensed under the MIT License.
+// License text available at https://opensource.org/licenses/MIT
+
 var Syslog = require('../');
 var assert = require('assert');
 var tap = require('tap');
