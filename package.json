@@ -9,14 +9,14 @@
   "scripts": {
     "test": "tap test/test-*.js"
   },
-  "author": "Sam Roberts <sam@strongloop.com>",
-  "homepage": "http://github.com/sam-github/modern-syslog",
+  "author": "Sam Roberts <rsam@ca.ibm.com>",
+  "homepage": "http://github.com/strongloop/modern-syslog",
   "repository": {
     "type": "git",
-    "url": "git@github.com:sam-github/modern-syslog.git"
+    "url": "git@github.com:strongloop/modern-syslog.git"
   },
   "bugs": {
-    "url": "https://github.com/sam-github/modern-syslog/issues"
+    "url": "https://github.com/strongloop/modern-syslog/issues"
   },
   "license": "MIT",
   "devDependencies": {
