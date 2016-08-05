@@ -30,7 +30,7 @@ class Worker: public Nan::AsyncWorker {
         void HandleOKCallback() {
             Nan::HandleScope scope;
 
-            if(!callback->IsEmpty())
+            if(callback)
                 callback->Call(0, NULL);
         };
 
@@ -80,7 +80,10 @@ NAN_METHOD(SysLog) {
 
     int priority = info[0]->Int32Value();
     char* message = NULL;
-    Nan::Callback *callback = new Nan::Callback(info[2].As<Function>());
+    Nan::Callback *callback = NULL;
+
+    if (info[2]->IsFunction())
+        callback = new Nan::Callback(info[2].As<Function>());
 
     if(node::Buffer::HasInstance(info[1])) {
         message = dupBuf(info[1]);
@@ -90,8 +93,9 @@ NAN_METHOD(SysLog) {
 
     if (message) {
         Nan::AsyncQueueWorker(new Worker(callback, priority, message));
-    } else if(!callback->IsEmpty()) {
+    } else if(callback) {
         callback->Call(0, NULL);
+        delete callback;
     }
 
     return;
