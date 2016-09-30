@@ -1,3 +1,11 @@
+2016-09-30, Version 1.1.4
+=========================
+
+ * package: test against node 6.x in travis (Sam Roberts)
+
+ * Check that cb is a function, not non-empty (Sam Roberts)
+
+
 2016-03-23, Version 1.1.3
 =========================
 
