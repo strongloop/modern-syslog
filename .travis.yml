@@ -5,6 +5,11 @@ node_js:
   - '4'
   - '5'
   - '6'
+  - '8'
+  - '10'
+  - '11'
+  - '12'
+sudo: false
 addons:
   apt:
     sources:
