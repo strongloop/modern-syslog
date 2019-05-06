@@ -1,3 +1,11 @@
+2019-05-06, Version 1.2.0
+=========================
+
+ * Support node up to and including 12.x (Sam Roberts)
+
+ * CI: remove sudo:false from .travis.yml (Matt Simerson)
+
+
 2016-09-30, Version 1.1.4
 =========================
 
