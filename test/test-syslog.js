@@ -39,7 +39,7 @@ function expect(l, m) {
                      currentMask, ++count, l, Buffer.isBuffer(m) ? 'buf' : 'str');
 
     if (Buffer.isBuffer(m)) {
-      m = Buffer(prefix + m);
+      m = Buffer.from(prefix + m);
     } else {
       m = prefix + m;
     }
@@ -62,9 +62,9 @@ function masked(l, m) {
 setmask(0xff);
 
 expect('LOG_CRIT', 'message');
-expect('LOG_CRIT', Buffer('message'));
+expect('LOG_CRIT', Buffer.from('message'));
 expect(l.LOG_CRIT, 'message');
-expect(l.LOG_CRIT, Buffer('message'));
+expect(l.LOG_CRIT, Buffer.from('message'));
 expect(l.LOG_DEBUG, 'debug');
 
 setmask(syslog.logUpto('LOG_INFO'));

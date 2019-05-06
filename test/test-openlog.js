@@ -13,12 +13,10 @@ tap.test(function(t) {
   t.doesNotThrow(function() {
     syslog.open('June', o.LOG_PERROR + o.LOG_PID, f.LOG_LOCAL1);
     syslog.upto('LOG_DEBUG');
-    t.comment('Expect on stderr a greeting to June with a PID:');
-    syslog.log('LOG_DEBUG', 'Hi, June', function() {
+    syslog.log('LOG_DEBUG', 'expected on stderr with a PID', function() {
       syslog.open('Leonie', o.LOG_PERROR, f.LOG_LOCAL2);
       syslog.upto('LOG_DEBUG');
-      t.comment('Expect on stderr a greeting to Leonie without a PID:');
-      syslog.debug('Hi, %s', 'Leonie');
+      syslog.debug('Expected on stderr %s a PID', 'without');
     });
   }, 'open and log');
   t.end();

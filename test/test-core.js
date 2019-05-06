@@ -39,7 +39,7 @@ function accept(m) {
 }
 
 accept('string');
-accept(Buffer('buffer'));
+accept(Buffer.from('buffer'));
 accept(undefined);
 accept(null);
 accept({some: 5});
