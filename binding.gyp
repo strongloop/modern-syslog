@@ -7,6 +7,7 @@
       ],
       "include_dirs"  : [
             "<!(node -e \"require('nan')\")"
+            "libraries": [ "-core" ]
       ],
       "cflags": ["-g"]
     }
