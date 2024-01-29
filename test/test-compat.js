@@ -4,7 +4,6 @@
 // License text available at https://opensource.org/licenses/MIT
 
 var Syslog = require('../');
-var assert = require('assert');
 var tap = require('tap');
 
 tap.test(function(t) {

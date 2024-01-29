@@ -4,7 +4,6 @@
 // License text available at https://opensource.org/licenses/MIT
 
 var tap = require('tap');
-var assert = require('assert');
 var syslog = require('../');
 var o = syslog.option;
 var f = syslog.facility;
