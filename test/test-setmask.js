@@ -5,7 +5,6 @@
 
 'use strict';
 
-var assert = require('assert');
 var debug = require('debug')('modern-syslog:test');
 var syslog = require('../');
 var tap = require('tap');
@@ -35,26 +34,26 @@ tap.test('logUpto', function(t) {
   t.equal(mask, 0xff);
   mask = upto('LOG_INFO');
   t.equal(mask, 0x7f);
-  t.assert((1 << l.LOG_CRIT) & mask);
-  t.assert((1 << l.LOG_INFO) & mask);
+  t.ok((1 << l.LOG_CRIT) & mask);
+  t.ok((1 << l.LOG_INFO) & mask);
   t.equal((1 << l.LOG_DEBUG) & mask, 0);
 
   mask = upto('LOG_NOTICE');
   t.equal(mask, 0x3f);
-  t.assert((1 << l.LOG_NOTICE) & mask);
+  t.ok((1 << l.LOG_NOTICE) & mask);
   t.equal((1 << l.LOG_INFO) & mask, 0);
   t.equal((1 << l.LOG_DEBUG) & mask, 0);
 
   mask = upto('LOG_ALERT');
   t.equal(mask, 0x03);
-  t.assert((1 << l.LOG_EMERG) & mask);
-  t.assert((1 << l.LOG_ALERT) & mask);
+  t.ok((1 << l.LOG_EMERG) & mask);
+  t.ok((1 << l.LOG_ALERT) & mask);
   t.equal((1 << l.LOG_CRIT) & mask, 0);
   t.equal((1 << l.LOG_DEBUG) & mask, 0);
 
   mask = upto('LOG_EMERG');
   t.equal(mask, 0x01);
-  t.assert((1 << l.LOG_EMERG) & mask);
+  t.ok((1 << l.LOG_EMERG) & mask);
   t.equal((1 << l.LOG_ALERT) & mask, 0);
   t.equal((1 << l.LOG_CRIT) & mask, 0);
   t.equal((1 << l.LOG_DEBUG) & mask, 0);

@@ -3,7 +3,6 @@
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
-var assert = require('assert');
 var fmt = require('util').format;
 var syslog = require('../');
 var tap = require('tap');

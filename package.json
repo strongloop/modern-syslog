@@ -20,11 +20,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "debug": "^4.1.1",
-    "tap": "^13.1.2"
+    "debug": "^4.3.4",
+    "tap": "^18.7.0"
   },
   "dependencies": {
-    "nan": "^2.13.2"
+    "nan": "^2.18.0"
   },
   "tags": [
     "log",
